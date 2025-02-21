@@ -11,6 +11,7 @@ public class scanner_stringbuffer{
         
         //call stringbuffer function
         stringbuffer(first_name, last_name);
+        scanner.close();
     }
 
     public static void stringbuffer(String first_name, String last_name){
