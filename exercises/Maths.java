@@ -17,6 +17,7 @@ public class Maths {
         num10 = Math.max(23,2); //print the maximum value (23)
 
         System.out.println(num1);
+        System.out.printf("%.2f\n" , num1); //we can limit decimal points by using printf function instead of println or print
         System.out.println(num2);
         System.out.println(num3);
         System.out.println(num4);
