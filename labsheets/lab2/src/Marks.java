@@ -5,7 +5,6 @@ public class Marks{
     private static int noOfSubjects = 3;
 
     private static int[][] marks ;
-    private static int[] total ;
 
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
@@ -14,7 +13,6 @@ public class Marks{
         noOfStudents = scanner.nextInt();
 
         marks = new int[noOfStudents][noOfSubjects];
-        total = new int[noOfStudents];
 
         int choice;
         do {
@@ -22,7 +20,7 @@ public class Marks{
             System.out.println("1. Enter marks of the student");
             System.out.println("2. Average for the subject");
             System.out.println("3. Average for the student");
-            System.out.println("4. Toal marks for the student");
+            System.out.println("4. Total marks for the student");
             System.out.println("5. Exit");
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
@@ -83,21 +81,23 @@ public class Marks{
         System.out.printf("Average for Chemistry : %.2f\n",sum/noOfStudents);
     }
     public static void totalMarks(){
+        System.out.print("\n");
         for (int i = 0 ; i < noOfStudents ; i++){
             int sum = 0 ;
             for (int j = 0 ; j < noOfSubjects ; j++){
                 sum += marks[i][j];
             }
-            total[i] = sum;
             System.out.printf("Total marks for student %d : %d\n",i+1,sum);
         }
     }
     public static void averageForStudent(){
-        totalMarks();
-        System.out.println("\n");
+        System.out.print("\n");
         for (int i = 0 ; i < noOfStudents ; i++){
-            double avg = (double)total[i]/noOfSubjects;
-            System.out.printf("Average for student %d : %.2f\n",i+1,avg);
+            int sum = 0 ;
+            for (int j = 0 ; j < noOfSubjects ; j++){
+                sum += marks[i][j];
+            }
+            System.out.printf("Average for student %d : %d\n",i+1,sum/noOfSubjects);
         }
     }
 
