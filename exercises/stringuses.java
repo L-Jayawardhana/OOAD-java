@@ -59,6 +59,6 @@ public class stringuses {
 
         //we can use Index function to get sub string using particular character.
         String user_name_1 = email.substring(0 , email.indexOf("@"));
-        String domain = email.substring(email.indexOf("@") + 1)// this get string after '@' character
+        String domain = email.substring(email.indexOf("@") + 1);// this get string after '@' character
     }
 }
