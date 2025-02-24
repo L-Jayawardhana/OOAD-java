@@ -48,5 +48,17 @@ public class stringuses {
         }else{
             System.out.println("name not matched");
         }
+
+        //Sub string method
+        //in use of this function we can get substring of a string
+        String email = "lakdinurameshjayawardhana@gmail.com";
+
+        //using this index method we can choose relevant string length
+        String user_name = email.substring(0 , 12);
+        System.out.println(user_name);
+
+        //we can use Index function to get sub string using particular character.
+        String user_name_1 = email.substring(0 , email.indexOf("@"));
+        String domain = email.substring(email.indexOf("@") + 1)// this get string after '@' character
     }
 }
