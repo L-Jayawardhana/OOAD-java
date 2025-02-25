@@ -12,24 +12,27 @@ public class switchUse {
         System.out.print("Enter value 2 : ");
         b = scanner.nextInt();
 
-        System.out.print("Enter your operator (+ - * / %):");
-        String operetor = scanner.next();
+        System.out.print("Enter your operator (+ - * / % ^):");
+        char operator = scanner.next().charAt(0);
 
-        switch (operetor){
-            case "+" :
+        switch (operator){
+            case '+' :
                 System.out.printf("answer is %d" , a+b);
                 break;
-            case "-":
+            case '-':
                 System.out.printf("answer is %d" , a-b);
                 break;
-            case "*":
+            case '*':
                 System.out.printf("answer is %d" , a*b);
                 break;
-            case "/":
+            case '/':
                 System.out.printf("answer is %.2f" , (double)a / b);
                 break;
-            case "%":
+            case '%':
                 System.out.printf("answer is %d" , a%b);
+                break;
+            case '^':
+                System.out.printf("answer is %.2f" ,Math.pow(a , b) );
                 break;
             default:
                 System.out.printf("not a valid operator");
