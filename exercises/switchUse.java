@@ -5,14 +5,15 @@ public class switchUse {
         //get the operator form the user and do the calculate
 
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter your operator (+ - * / %):");
-        String operetor = scanner.next();
 
         int a , b;
         System.out.print("Enter value 1 : ");
         a = scanner.nextInt();
         System.out.print("Enter value 2 : ");
         b = scanner.nextInt();
+
+        System.out.print("Enter your operator (+ - * / %):");
+        String operetor = scanner.next();
 
         switch (operetor){
             case "+" :
@@ -30,7 +31,9 @@ public class switchUse {
             case "%":
                 System.out.printf("answer is %d" , a%b);
                 break;
-
+            default:
+                System.out.printf("not a valid operator");
+                break;
         }
     }
 }
