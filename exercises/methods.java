@@ -23,6 +23,9 @@ public class methods {
         double velocity = calcVelocity(u , a , t);
         System.out.printf("Velocity at the time %.1fs is %.2f m/s", t , velocity);
 
+        //we also can do all the stuff in the another method
+        getThevelocity();
+        scanner.close();
     }
     static void cubicValue(double value){
         System.out.printf("Cubic value is %.2f ", Math.pow(value , 3));
@@ -31,5 +34,7 @@ public class methods {
         double v = u + a * t;
         return v;
     }
-
+    static void getThevelocity();
+        Scanner sc = new Scanner(System.in);
+        
 }
