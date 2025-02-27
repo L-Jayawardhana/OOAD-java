@@ -34,7 +34,7 @@ public class methods {
         double v = u + a * t;
         return v;
     }
-    static void getThevelocity();
+    static void getThevelocity() {
         Scanner sc = new Scanner(System.in);
 
         System.out.printf("Enter the initial velocity: ");
@@ -42,8 +42,9 @@ public class methods {
         System.out.printf("Enter the acceleration: ");
         double a = sc.nextDouble();
         System.out.printf("Enter the time: ");
-        double t =  sc.nextDouble();
+        double t = sc.nextDouble();
 
-        double v = u + a * t;
-        System.out.printf("Velocity at the time %.1fs is %.2f m/s", t , velocity);
+        double velocity = u + a * t;
+        System.out.printf("Velocity at the time %.1fs is %.2f m/s", t, velocity);
+    }
 }
