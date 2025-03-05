@@ -18,6 +18,8 @@ public class variables {
         int b=60;
         System.out.printf("value of b is %d\n",b );
     }
+
+        //use global variables
     public static void anotherLocalVariable2(){
         System.out.printf("valus of x is %d",x );
     }
