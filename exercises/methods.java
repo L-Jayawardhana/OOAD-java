@@ -23,6 +23,7 @@ public class methods {
         double velocity = calcVelocity(u , a , t);
         System.out.printf("Velocity at the time %.1fs is %.2f m/s", t , velocity);
 
+        System.out.println("\n");
         //we also can do all the stuff in the another method
         getThevelocity();
         scanner.close();

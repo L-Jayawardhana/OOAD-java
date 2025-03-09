@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/OOAD-java.iml" filepath="$PROJECT_DIR$/OOAD-java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsheets/lab2/lab2.iml" filepath="$PROJECT_DIR$/labsheets/lab2/lab2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/labsheets/labsheets.iml" filepath="$PROJECT_DIR$/labsheets/labsheets.iml" />
     </modules>
   </component>
 </project>
