@@ -32,13 +32,12 @@ public class JavaSlotMachine {
             bet = scanner.nextInt();
 
             if (bet > balance){
-                System.out.println("Not enough balance...!");
+                System.out.printf("Not enough balance.! Your balance is Rs.%d\n",balance);
                 continue;
             }else if (bet <= 0){
                 System.out.println("Bet should be more than Rs.0");
                 continue;
             }else {
-                System.out.println();
                 balance -= bet;
                 System.out.println("Spinnig row....");
                 System.out.println("------------------");
@@ -50,21 +49,49 @@ public class JavaSlotMachine {
                     System.out.printf("| %s ",image);
                     slotimages[i] = image ;
                 }
-                System.out.printf("|\n------------------\n");
-                if (slotimages[0].equals(slotimages[1]) || slotimages[1].equals(slotimages[2])){
-                    switch(slotimages[1]){
-                        case "🎈" -> balance += bet*2;
-                        case "🍇" -> balance += bet*3;
-                        case "🍒" -> balance += bet*4;
-                        case "🍓" -> balance += bet*5;
-                        case "💵" -> balance += bet*10;
-                    }
+                System.out.printf("|\n----------------\n");
+
+                int payout = payOut(slotimages , bet);
+                if (payout > 0){
+                    System.out.printf("You won Rs.%d\n",payout);
+                    balance += payout;
+                }else{
+                    System.out.printf("You lose Rs.%d\n" ,bet);
+                }
+                System.out.printf("Your balance is Rs.%d\n",balance);
+                System.out.printf("\nDo you want play again(Y/N) : ");
+                char choice = scanner.next().toUpperCase().charAt(0);
+
+                while(choice != 'Y' && choice != 'N'){
+                    System.out.printf("Invalid input Re enter (Y/N) : ");
+                    choice = scanner.next().toUpperCase().charAt(0);                }
+                if (choice == 'N'){
+                    break;
                 }
             }
-
         }
-
-
-
+    }
+    static int payOut(String[] slotimages , int bet){
+        if (slotimages[0].equals(slotimages[1]) || slotimages[1].equals(slotimages[2])){
+            return switch(slotimages[1]){
+                case "🎈" -> bet*2;
+                case "🍇" -> bet*3;
+                case "🍒" -> bet*4;
+                case "🍓" -> bet*5;
+                case "💵" -> bet*7;
+                default -> 0;
+            };
+        }else if(slotimages[0].equals(slotimages[1]) && slotimages[0].equals(slotimages[2])){
+            return switch (slotimages[0]){
+                case "🎈" -> bet*10;
+                case "🍇" -> bet*15;
+                case "🍒" -> bet*20;
+                case "🍓" -> bet*25;
+                case "💵" -> bet*30;
+                default -> 0;
+            };
+        }else{
+            return 0;
+        }
     }
 }
