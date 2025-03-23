@@ -22,7 +22,7 @@ public class BorrowAndReturn {
             if(!manageMembers.findMemberByID(memberID).get(2).equals("NONE")){
                 System.out.println("Member " + memberID + " is already borrowed a book..!");
             }else{
-                System.out.println("Enter book name to borrow : ");
+                System.out.print("Enter book name to borrow : ");
                 String bookName = scanner.nextLine();
 
                 for (ArrayList<String> book : manageBooks.books){
@@ -55,7 +55,7 @@ public class BorrowAndReturn {
             if(manageMembers.findMemberByID(memberID).get(2).equals("NONE")){
                 System.out.println("Member " + memberID + " hasn't borrowed a book..!");
             }else{
-                System.out.println("Enter book name to return : ");
+                System.out.print("Enter book name to return : ");
                 String bookName = scanner.nextLine();
 
                 // check the returned book is the same book that user borrowed
