@@ -8,6 +8,7 @@ public class Main9 {
 
         Car_S car1 = new Car_S("Ford" , "Mustang" , 2024 , "red");
         Car_S car2 = new Car_S("Porsche" , "gt3 RS" , 2025 , "grey");
+        Car_S car3 = new Car_S("Maserati" , " quateraporte" , 2024 , "white");
 
         // when directly assign the object name with out a overriding
         // it will print the hash code of that memory location
@@ -15,5 +16,6 @@ public class Main9 {
         // with the toString Overriding it will return the string
         System.out.println(car1);
         System.out.println(car2);
+        System.out.println(car3);
     }
 }
