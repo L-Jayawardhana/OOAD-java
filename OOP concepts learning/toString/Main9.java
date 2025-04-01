@@ -20,5 +20,6 @@ public class Main9 {
         System.out.println(car2);
         System.out.println(car3);
         System.out.println(car4);
+        System.out.println(car5);
     }
 }
