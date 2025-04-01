@@ -10,6 +10,7 @@ public class Main9 {
         Car_S car2 = new Car_S("Porsche" , "gt3 RS" , 2025 , "grey");
         Car_S car3 = new Car_S("Maserati" , " quateraporte" , 2024 , "white");
         Car_S car4 = new Car_S("Toyota" , "Supra" , 2024 , "white");
+        Car_S car5 = new Car_S("Nissan" , "GTR" , 2023 , "blue");
 
         // when directly assign the object name with out a overriding
         // it will print the hash code of that memory location
