@@ -11,7 +11,7 @@ public class Main12 {
         Bike bike = new Bike();
         Boat boat = new Boat();
 
-        // if i want to create a array
+        // if I want to create an array
         // Car_1[] cars = {car_1 , bike , boat}
         // Bike[] bikes = {car_1 , bike , boat}
         // Boat[] boats = {car_1 , bike , boat}
