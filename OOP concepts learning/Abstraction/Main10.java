@@ -16,7 +16,7 @@ public class Main10 {
         System.out.println(rectangle.area());
 
         System.out.println();
-        
+
         circle.isShape();
         rectangle.isShape();
 
