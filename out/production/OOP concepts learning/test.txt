@@ -1,3 +1,0 @@
-This is a test1
-This is file writing practise
-In JAVA
