@@ -10,6 +10,7 @@ public class Main15 {
         System.out.println(car.model);
         System.out.println(car.year);
 
+
         // If deleted the car object, we have no longer access have to the engine.
         System.out.println(car.engine.type);
 
