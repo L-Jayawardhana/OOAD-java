@@ -3,8 +3,8 @@ public class Car3 {
     int year;
     Engine engine;
 
-    Car3(String model, int year, String enginetype) {
-        this.model = model;
+    Car3(String model1, int year, String enginetype) {
+        this.model = model1;
         this.year = year;
         this.engine = new Engine(enginetype);
     }
