@@ -1,6 +1,3 @@
-import jdk.internal.access.JavaIOFileDescriptorAccess;
-import jdk.internal.jmod.JmodFile;
-
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
