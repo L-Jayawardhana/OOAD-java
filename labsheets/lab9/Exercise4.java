@@ -34,12 +34,15 @@ public class Exercise4 {
         int studentNumber = scanner.nextInt();
 
         // Find and display student info if exists
-        Student student = studentMap.get(studentNumber);
-        if (student != null) {
-            System.out.println("\nStudent details:");
-            student.displayInfo();
-        } else {
-            System.out.println("Student with ID " + studentNumber + " not found.");
+        try{
+            if (studentMap.containsKey(studentNumber)) {
+                Student student = studentMap.get(studentNumber);
+                student.displayInfo();
+            }
+        }catch (Exception e){
+            System.out.println("An error occurred while retrieving student details: " + e.getMessage());
+        } finally {
+            System.out.println("Thank you for using the student information system.");
         }
 
         scanner.close();
